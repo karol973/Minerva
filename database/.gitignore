@@ -1,0 +1,24 @@
+
+# Laravel
+/vendor/
+/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment files
+.env
+.env.backup
+*.env.local
+
+# Cache & compiled files
+/public/storage
+/storage/*.key
+/storage/app/public
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*
+
+# Laravel specific
+bootstrap/cache/*.php
+*.sqlite*
