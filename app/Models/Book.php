@@ -14,10 +14,16 @@ class Book extends Model
         'author_id',
         'year',
         'description',
+        'category_id',
     ];
 
     public function author()
     {
         return $this->belongsTo(Author::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
     }
 }
