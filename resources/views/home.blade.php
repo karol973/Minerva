@@ -12,6 +12,18 @@
         <form action="/logout" method="POST">
         @csrf 
         <button>Log out</button>
+
+        <div style="border: 3px solid black"></div>
+        <h2>Create book</h2>
+        <form action="/create-book" method="POST">
+        @csrf
+        <input name="title" type="text" placeholder="Title">
+        <input name="author_id" type="number" placeholder="Author Id">
+        <input name="year" type="text" placeholder="Year">
+        <input name="description" type="text" placeholder="description">
+        <input name="category_id" type="text" placeholder="category_id">
+        <button>Create book</button>
+        </form>
 </form>
     @else
     @if ($errors->any())
@@ -38,8 +50,8 @@
             <h2>Login</h2>
             <form action="/login" method="POST">
             @csrf
-            <input type="text" name="name" placeholder="name">
-            <input type="password" name="password" placeholder="password">
+            <input type="text" name="loginname" placeholder="name">
+            <input type="password" name="loginpassword" placeholder="password">
             <button>Log in</button>
             </form>
         </div>
