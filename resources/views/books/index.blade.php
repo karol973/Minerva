@@ -1,3 +1,5 @@
+@auth 
+    
 <div class="container">
 <table class="table table-hover">
 <thead>
@@ -21,3 +23,8 @@
 
 </table>
 </div>
+
+@else
+
+<h2>Nie możesz wyświetlić zawartości tej strony</h2>
+@endauth
