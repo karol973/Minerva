@@ -22,9 +22,22 @@ class BookController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function createBook(Request $request)
     {
-        //
+        $incomingFields = $request->validate([
+            'title' => 'required',
+            'author_id' => 'required',
+            'year'=> 'required',
+            'description' => 'required',
+            'category_id' => 'required',
+        ]);
+
+        $incomingFields['title'] = strip_tags($incomingFields['title']);
+        $incomingFields['description'] = strip_tags($incomingFields['description']);
+
+        Book::create($incomingFields);
+
+        return redirect('/home');
     }
 
     /**
